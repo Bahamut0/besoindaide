@@ -27,14 +27,17 @@ export class ListPrestationsComponent implements OnInit {
   ngOnInit(): void {
     this.getPrestations();
     this.getCategories();
+    
+    
   }
 
   getCategories(): void {
      this.categories = this.categoriesService.getCategories();
    }
 
-  getPrestations(): void {
+  getPrestations(): Prestation [] {
     this.prestations = this.prestationsService.getPrestations();
+    return this.prestations;
   }
 
   navigateToDetails(prestation: Prestation): void {
@@ -46,6 +49,34 @@ export class ListPrestationsComponent implements OnInit {
   navigateToProfile(person: Person): void {
     this.personsService.setSelectedPerson(person);
     this.router.navigateByUrl("profile");
+  }
+
+  //filtre
+
+  getPrestationsByTypeAnnonce(filtre: string): void {
+    switch (filtre) {
+      case 'offre':
+        this.sortedPrestations = this.prestations.filter(pres => pres.typeAnnonce == 0);
+        break;
+      case 'demande':
+        this.sortedPrestations = this.prestations.filter(pres => pres.typeAnnonce == 1);
+        break;
+
+      default:
+        this.sortedPrestations = this.getPrestations();
+        break;
+    }
+  }
+
+
+  getPrestationsByDate(nbrJour: number): void {
+
+    this.sortedPrestations = this.prestations.filter(
+      pres => (Math.ceil((Math.abs(new Date().getTime() - pres.datePublication.getTime())) / (1000 * 3600 * 24))) <= nbrJour);
+  }
+
+  getPrestationsByCategory(categoryLabel: string): void {
+    this.sortedPrestations = this.prestations.filter(pres => pres.category.label == categoryLabel);
   }
 
 }

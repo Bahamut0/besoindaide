@@ -1,0 +1,14 @@
+
+<p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span
+        class="card-text">{{ prestation.title }}</span></p>
+<p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span
+        class="card-text">{{ prestation.title }} </span></p>
+<img src="{{ prestation.category.image }}" class="card-img-top" alt="categorie">
+<div class="card-body">
+    <p class="card-text">{{ prestation.description }}</p>
+    <p class="card-text">{{ prestation.datePublication | date }}</p>
+    <p class="card-text"> <a class="btn btn-primary text-white" (click)="navigateToProfile(prestation.person)">
+            {{ prestation.person.name }} {{ prestation.person.firstname }} </a></p>
+    <a class="btn btn-lg btn-secondary text-white" (click)="navigateToDetails(prestation)">Détails</a>
+
+</div>

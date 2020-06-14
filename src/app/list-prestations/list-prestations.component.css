@@ -14,3 +14,9 @@
     font-family: 'Lobster', cursive!important;
     font-weight: bold!important;
 }
+li{
+  list-style-type: none; 
+}
+
+/* css supplémentaire*/
+

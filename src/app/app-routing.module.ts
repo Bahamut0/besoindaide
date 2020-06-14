@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: "prestations", component: ListPrestationsComponent },
   { path: "prestations/details", component: DetailsPrestationComponent },
   { path: "profile", component: ProfileComponent },
+  { path: "all-prestations", component: ListPrestationsComponent },
 ];
 
 @NgModule({

@@ -1,23 +1,75 @@
 
 <h2 class="text-center my-5 py-5 text-info display-3">Liste des prestations </h2>
 
+
+<!--Affichage des filtres -->
+<div class="fullwidth">
+      <!-- Filters -->
+      <ul class="filter_list text-white list-group list-group-horizontal my-5" id="tags" >
+        <li class="filter list-group-item" data-filter="all">
+          <a title="tout" class="btn btn-primary">
+            <span (click)="getPrestationsByTypeAnnonce('offre&demande')">Afficher tout</span>
+          </a>
+        </li>
+        <li class="filter list-group-item" data-filter=".offre">
+          <a title="les-offres" class="btn btn-secondary">
+            <span (click)="getPrestationsByTypeAnnonce('offre')">Offres</span>
+          </a>
+        </li>
+        <li class="filter list-group-item" data-filter=".demande">
+          <a title="les-demandes" class="btn btn-info">
+            <span (click)="getPrestationsByTypeAnnonce('demande')">Demandes</span>
+          </a>
+        </li>
+      </ul>
+
+<!-- Affichage des prestations-->
+
+
+
+
 <section class="wrapper">
   <div class="row jumbotron text-center" >
-    <div class="card bg-white col-4 my-5 py-4 " *ngFor="let prestation of prestations">
-      
-      <p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span class="card-text">{{ prestation.title }}</span></p>
-      <p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span class="card-text">{{ prestation.title }} </span></p>
-      <img src="{{ prestation.category.image }}" class="card-img-top" alt="categorie">
-      <div class="card-body">
-        <p class="card-text">{{ prestation.description }}</p>
-        <p class="card-text">{{ prestation.datePublication | date }}</p>
-        <p class="card-text"> <a class="btn btn-primary text-white"  (click)="navigateToProfile(prestation.person)"> {{ prestation.person.name }} {{ prestation.person.firstname }} </a></p>
-        <a class="btn btn-lg btn-secondary text-white" (click)="navigateToDetails(prestation)">Détails</a> 
-      
-      </div>
-       
-    </div>
+    <div class="card bg-white col-4 my-5 py-4 " *ngFor="let prestation of sortedPrestations">
 
+
+
+      <!--Pour les offres-->
+      <div *ngIf="prestation.typeAnnonce==0" class="one_on_three mix offre">
+                <!--mon code-->
+                <p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span
+                    class="card-text">{{ prestation.title }}</span></p>
+                <p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span
+                    class="card-text">{{ prestation.title }} </span></p>
+                <img src="{{ prestation.category.image }}" class="card-img-top" alt="categorie">
+                <div class="card-body">
+                  <p class="card-text">{{ prestation.description }}</p>
+                  <p class="card-text">{{ prestation.datePublication | date }}</p>
+                  <p class="card-text"> <a class="btn btn-primary text-white" (click)="navigateToProfile(prestation.person)">
+                      {{ prestation.person.name }} {{ prestation.person.firstname }} </a></p>
+                  <a class="btn btn-lg btn-secondary text-white" (click)="navigateToDetails(prestation)">Détails</a>
+                
+                </div>
+      </div>
+      <!--Pour les demandes-->
+      <div *ngIf="prestation.typeAnnonce==1" class="one_on_three mix demande">
+        <!--mon code-->
+        <p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span
+            class="card-text">{{ prestation.title }}</span></p>
+        <p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span
+            class="card-text">{{ prestation.title }} </span></p>
+        <img src="{{ prestation.category.image }}" class="card-img-top" alt="categorie">
+        <div class="card-body">
+          <p class="card-text">{{ prestation.description }}</p>
+          <p class="card-text">{{ prestation.datePublication | date }}</p>
+          <p class="card-text"> <a class="btn btn-primary text-white" (click)="navigateToProfile(prestation.person)">
+              {{ prestation.person.name }} {{ prestation.person.firstname }} </a></p>
+          <a class="btn btn-lg btn-secondary text-white" (click)="navigateToDetails(prestation)">Détails</a>        
+        </div>
+      </div>
+      <!--Affichage par défaut :, faire un else pour récupérer toutes les prestations-->
+      <div **ngIf="prestation.typeAnnonce==1;else all-prestations" ></div>       
+    </div>
   </div>
 </section>
 
