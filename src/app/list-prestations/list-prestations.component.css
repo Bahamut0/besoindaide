@@ -1,0 +1,16 @@
+.wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    place-content: center;
+    justify-content: center;
+    width: 100%;
+    grid-gap: 10px;
+  }
+  
+  .card {
+    display: inline-flex;
+  }
+  h1, h2{
+    font-family: 'Lobster', cursive!important;
+    font-weight: bold!important;
+}

@@ -1,0 +1,17 @@
+#ask-help{
+    
+    /*background: center / contain no-repeat url(../../assets/img/tree2.jpg) */ ; 
+
+}
+#ask-help button{
+    background-color: #ffffff;
+    border: none;
+}
+.row{
+ overflow: hidden; 
+}
+
+[class*="col-"]{
+ margin-bottom: -99999px;
+ padding-bottom: 99999px;
+}

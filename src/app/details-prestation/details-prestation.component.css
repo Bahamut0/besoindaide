@@ -1,0 +1,15 @@
+.wrapper-prestation {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+  .fs18{
+    font-size: 18px;
+  }
+  .bolder{
+    font-weight: bolder;
+  }

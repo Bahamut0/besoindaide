@@ -1,0 +1,36 @@
+
+
+<h2 class="display-3 text-primary text-center">{{ selectedPrestation.title }}</h2>
+  <div class="row  d-flex justify-content-center fs18">
+    <div class="col-md-6 py-2 ">     
+      <div class="card card-body bg-white ">
+        <img src="{{ selectedPrestation.category.image }}" class="card-img-top" alt="categorie">
+      </div>
+    </div>         
+    <div class="col-md-6 py-2">
+        <div class="card card-body h-100 bg-white">
+         
+          <div class="card-body h-100">
+            <h2 class="card-title bolder text-primary text-center" *ngIf="selectedPrestation.typeAnnonce==true"><strong>Offre
+              </strong> </h2>
+            <h2 class="card-title bolder text-secondary text-center" *ngIf="!selectedPrestation.typeAnnonce"><strong>Demande
+              </strong></h2>
+              <hr>
+            <p class="card-text"> <span class="bolder">Description :</span> {{ selectedPrestation.description }}</p>
+            <hr>
+
+            <p class="card-text"> <span class="bolder">Date de publication :</span> {{ selectedPrestation.datePublication | date }}</p>
+            <hr>
+            <p class="card-text"><span class="bolder">Catégorie de service : </span> {{ selectedPrestation.category.label }}
+            </p>
+            <hr>
+            <p class="card-text"><span class="bolder">Auteur : </span> <a href="#">{{ selectedPrestation.person.firstname }} {{ selectedPrestation.person.name }} </a>
+            </p>        
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="text-center my-5">
+    <a class="btn btn-info btn-lg py-3 text-white " (click)="navigateToList()">Retourner sur la liste des prestations</a>
+  </div>
+
