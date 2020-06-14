@@ -34,7 +34,7 @@
                                         <h4 class="card-text">Petit mot de l'auteur</h4>
                                         <p><i class="fas fa-quote-left"></i>&nbsp;
                                             <span>{{ prestation.person.descriptionProfil }} </span> &nbsp;<i class="fas fa-quote-right"></i></p>
-                                            <h4 >De <a class="a-hover" (click)="navigateToProfile(prestation.person)"> <span class="card-title"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
+                                            <h4 >De <a class="a-hover " (click)="navigateToProfile(prestation.person)"> <span class="card-title cursor-pointer"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
                                         <ul class="list-inline my-5">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank"
@@ -88,7 +88,7 @@
                     <figcaption>
                         
                         <a (click)="navigateToProfile(person)">
-                            <h3 class="text-white"> <i class="fas fa-plus-circle"></i> &nbsp;{{ person.name }} <span> {{ person.firstname }}</span></h3>
+                            <h3 class="text-white cursor-pointer"> <i class="fas fa-plus-circle"></i> &nbsp;{{ person.name }} <span> {{ person.firstname }}</span></h3>
                             <p>{{ person.dateRegistration | date }}</p>
                         </a>
                     </figcaption>

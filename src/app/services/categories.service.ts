@@ -27,6 +27,9 @@ export class CategoriesService {
     ),
     new Category(
       7, "Jardinage", "/assets/img/category/lawnmower.jpg"
+    ),
+    new Category(
+      8, "Informatique", "/assets/img/category/informatique.jpg"
     )
   ]
   selectedCategory: Category;

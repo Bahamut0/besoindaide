@@ -14,3 +14,14 @@
 #menu a{
     font-size: 17px;
 }
+.cursor-pointer :hover {
+   cursor: pointer!important;
+}
+#navbarSupportedContent ul li a {
+    color: green;
+    
+}
+#navbarSupportedContent ul li :hover {
+    color: darkgreen;
+    font-weight: bolder;
+}

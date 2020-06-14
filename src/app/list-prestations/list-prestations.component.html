@@ -1,7 +1,6 @@
 
 <h2 class="text-center my-5 py-5 text-info display-3">Liste des prestations </h2>
 
-
 <!--Affichage des filtres -->
 <div class="fullwidth">
       <!-- Filters -->
@@ -24,19 +23,11 @@
       </ul>
 
 <!-- Affichage des prestations-->
-
-
-
-
 <section class="wrapper">
   <div class="row jumbotron text-center" >
     <div class="card bg-white col-4 my-5 py-4 " *ngFor="let prestation of sortedPrestations">
-
-
-
       <!--Pour les offres-->
       <div *ngIf="prestation.typeAnnonce==0" class="one_on_three mix offre">
-                <!--mon code-->
                 <p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span
                     class="card-text">{{ prestation.title }}</span></p>
                 <p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span
@@ -53,7 +44,6 @@
       </div>
       <!--Pour les demandes-->
       <div *ngIf="prestation.typeAnnonce==1" class="one_on_three mix demande">
-        <!--mon code-->
         <p class="card-title" *ngIf="prestation.typeAnnonce==0"><strong>Offre - </strong> <span
             class="card-text">{{ prestation.title }}</span></p>
         <p class="card-title" *ngIf="prestation.typeAnnonce==1"><strong>Demande -</strong> <span
