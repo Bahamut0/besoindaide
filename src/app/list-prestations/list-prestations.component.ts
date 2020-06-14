@@ -45,13 +45,12 @@ export class ListPrestationsComponent implements OnInit {
     this.router.navigateByUrl("prestations/details");
   }
 
- //il n'y a pas de chemin vers les différents users mais vers un une prestation
   navigateToProfile(person: Person): void {
     this.personsService.setSelectedPerson(person);
     this.router.navigateByUrl("profile");
   }
 
-  //filtre
+  //filtres
 
   getPrestationsByTypeAnnonce(filtre: string): void {
     switch (filtre) {

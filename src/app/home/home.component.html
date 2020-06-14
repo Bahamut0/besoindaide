@@ -4,7 +4,7 @@
     
     <section id="team" class="pb-5">
         <div class="container">
-            <h5 class="section-title h1">Les dernières prestations ?</h5>
+            <h5 class="section-title h1">Qu'il y a t-il de nouveau ?</h5>
             <div class="row">
                 <!-- Team member e-->
                 <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let prestation of sortedPrestations | slice:0:6;">
@@ -34,7 +34,7 @@
                                         <h4 class="card-text">Petit mot de l'auteur</h4>
                                         <p><i class="fas fa-quote-left"></i>&nbsp;
                                             <span>{{ prestation.person.descriptionProfil }} </span> &nbsp;<i class="fas fa-quote-right"></i></p>
-                                            <h4 >De <a class="a-hover " (click)="navigateToProfile(prestation.person)"> <span class="card-title cursor-pointer"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
+                                            <h4 class=" cursor-pointer" >De <a class="a-hover " (click)="navigateToProfile(prestation.person)"> <span class="card-title"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
                                         <ul class="list-inline my-5">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank"
