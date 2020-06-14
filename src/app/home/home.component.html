@@ -14,9 +14,9 @@
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <h2 class="card-title bolder text-primary text-center" *ngIf="prestation.typeAnnonce==true"><strong>Offre
+                                        <h2 class="card-title bolder text-primary text-center" *ngIf="prestation.typeAnnonce==0"><strong>Offre
                                             </strong> </h2>
-                                        <h2 class="card-title bolder text-secondary text-center" *ngIf="!prestation.typeAnnonce"><strong>Demande
+                                        <h2 class="card-title bolder text-secondary text-center" *ngIf="prestation.typeAnnonce==1"><strong>Demande
                                             </strong></h2>
                                         <p><img class=" img-thumbnail"
                                                 src="{{ prestation.category.image }}"
@@ -34,7 +34,7 @@
                                         <h4 class="card-text">Petit mot de l'auteur</h4>
                                         <p><i class="fas fa-quote-left"></i>&nbsp;
                                             <span>{{ prestation.person.descriptionProfil }} </span> &nbsp;<i class="fas fa-quote-right"></i></p>
-                                            <h4 >De <a href="#"> <span class="card-title"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
+                                            <h4 >De <a class="a-hover" (click)="navigateToProfile(prestation.person)"> <span class="card-title"> {{ prestation.person.name }} {{ prestation.person.firstname }} </span></a></h4>
                                         <ul class="list-inline my-5">
                                             <li class="list-inline-item">
                                                 <a class="social-icon text-xs-center" target="_blank"
@@ -83,121 +83,22 @@
             <h5 class="section-title h1">Qui sommes nous ?</h5>
             <div class="text-center d-flex justify-content-center row">
                 
-                <figure class="snip0078 yellow w300 col-md-3"  *ngFor="let person of sortedPersons  | slice:0:6;">
+                <figure class="snip0078 yellow w300 col-md-3"  *ngFor="let person of sortedPersons  | slice:0:6;" >
                     <img src="{{ person.urlPhoto }}" alt="sampl45" class="w300" />
                     <figcaption>
-                        <h3 class="text-white">{{ person.name }} <span> {{ person.firstname }}</span></h3>
-                        <p>{{ person.dateRegistration | date }}</p>
+                        
+                        <a (click)="navigateToProfile(person)">
+                            <h3 class="text-white"> <i class="fas fa-plus-circle"></i> &nbsp;{{ person.name }} <span> {{ person.firstname }}</span></h3>
+                            <p>{{ person.dateRegistration | date }}</p>
+                        </a>
                     </figcaption>
-                    <a href="#"></a>
+                    
                 </figure>
     
             </div>
         </div>
     </section>
 
-
-    <!-- <h2 class="display-2 my-5 py-5 text-center lobster">Ils se proposent pour vous aider </h2>
-    <section id="team" class="pb-5">
-        <div class="container">
-            <h5 class="section-title h1">Qui sommes nous ?</h5>
-    <div class="text-center offset-1">
-        <figure class="snip0078 hover blue" >
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg" alt="sampl45" />
-            <figcaption>
-                <h2>Marine <span>Fantastique</span></h2>
-                <p>Photographe professionnelle. Je suis dispo à tout moment pour tout type d'événements</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure>
-        
-        <figure class="snip0078 yellow"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg"
-                alt="sample46" />
-            <figcaption>
-                <h2> Mariem<span> Surdouée</span></h2>
-                <p>Je suis assitante scolaire</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure>
-        <figure class="snip0078 red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample7.jpg"
-                alt="sample50" />
-            <figcaption>
-                <h2>Atep <span>Dynamique</span></h2>
-                <p>Je suis nounou ! Dispo immédiatement</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure>
-
-        <figure class="snip0078 hover blue">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample13.jpg" alt="sampl45" />
-            <figcaption>
-                <h2>Lionel <span> Génie </span></h2>
-                <p>Je suis informaticien - Spécialiste en C#</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure>
-        <figure class="snip0078 yellow"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample12.jpg"
-                alt="sample50" />
-            <figcaption>
-                <h2>Steven <span>Wright</span></h2>
-                <p>You can't have everything... where would you put it?</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure>
-        <figure class="snip0078 red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample15.jpg"
-                alt="sample46" />
-            <figcaption>
-                <h2>Arthur C. <span> Clarke</span></h2>
-                <p>There is hopeful symbolism in the fact that flags do not wave in a vacuum.</p>
-            </figcaption>
-            <a href="#"></a>
-        </figure> 
-
-     </div>
-    </div>
-    </section> 
--->
-
-
-<!--  
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="caroussel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-    
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/img/brico.png" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <p>De l'aide pour bricoler chez vous ?</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/informatique.jpg" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <p>Besoin d'un dépanage informatique ?</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/cours1.jpg" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <p>Besoin d'une formation ?</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    
--->
 
 
 

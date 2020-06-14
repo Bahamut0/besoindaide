@@ -1,17 +1,211 @@
-#ask-help{
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(https://static.vecteezy.com/system/resources/previews/000/092/726/non_2x/question-mark-background-vector.jpg), center center no-repeat;
+  background-size: cover;
+    display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 12pt;
+  font-family: "Spartan";
+  color: #2A293E;
+  
+}
+
+.contact-us {
+  /*background: #f8f4e5;*/
+  padding: 50px 100px;
+  border-top: 7px solid #f45702;
+  border-bottom: 7px solid #f45702;
+}
+/* avec modif de l'opacité du background
+.contact-us {
+  background: rgba(248, 244, 229, 0.5);
+  padding: 50px 100px;
+  border-top: 7px solid #f45702;
+  border-bottom: 7px solid #f45702;
+}
+*/
+
+label, input, textarea, select, option{
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: "Spartan";
+}
+
+input {
+  margin-bottom: 24pt;
+}
+
+h1{
+    font-family: "Spartan";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #f45702;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 24pt;
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #f45702;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+button:hover {
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+
+::selection {
+  background: #ffc7b8;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #6bd4b1;
+  -webkit-text-fill-color: #2A293E;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* 
+#Global #gauche
+{
+float:left;
+display: block;
+}
+
+#Global #center
+{
+float:center;
+display:block;
+}
+#Global #droite
+{
+float:center;
+display:block;
+}
+
+#divbordure{
+border-width:1px;
+border-style:outset;
+border-color:black;
+position: relative;
+}
+
+#description{
+background-color: grey; 
+opacity: 0.4; 
+color:white; 
+padding:1em
+}
+
+#test{
+width : 140px;
+margin : auto;
+position : relative;
+
+}
+
+#titre{
+font-size: 24px; 
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#email {
+width:340px;
+}
+
+#formu{
+padding-top: 35px;
+    padding-bottom: 25px;
+    padding-left: 50px ;
     
-    /*background: center / contain no-repeat url(../../assets/img/tree2.jpg) */ ; 
+}
+#inputname4{
+width:250px;
+font-weight:bold;
+}
+#inputfirstname4{
+width:250px;
+}
+#inputage4{
+width:250px;
+}
+#inputville4{
+width:370px;
+}
+#inputemail4{
+width:200px;
+}
+#inputAnnonce{
+width:250px;
+}
+#inputCategorie4{
+width:250px;
+}
 
+#inputAddress{
+width:250px;
 }
-#ask-help button{
-    background-color: #ffffff;
-    border: none;
+#textCheckbox{
+    font-size: 14px;
 }
-.row{
- overflow: hidden; 
-}
-
-[class*="col-"]{
- margin-bottom: -99999px;
- padding-bottom: 99999px;
-}
+#formu{
+    background-color: rgba(72, 142, 245, 0.3);
+} */

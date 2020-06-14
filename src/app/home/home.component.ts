@@ -35,9 +35,10 @@ export class HomeComponent implements OnInit {
     this.prestationsService.setSelectedPrestation(prestation);
     this.router.navigateByUrl("prestations/details");
   }
-  // navigateToProfile(person: Person): void {
-  //   this.personsService.setSelectedPerson(person);
-  //   this.router.navigateByUrl("persons/profile");
-  // }
+ 
+  navigateToProfile(person: Person): void {
+    this.personsService.setSelectedPerson(person);
+    this.router.navigateByUrl("profile");
+  }
 
 }

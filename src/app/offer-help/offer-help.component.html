@@ -1,0 +1,46 @@
+<body>
+    <div class="contact-us">
+      <form action="#">
+        <h1 id="h1offer">Proposer un service</h1>
+        <label for="customerName">Nom <em>&#x2a;</em></label>
+        <input id="customerName" name="customerName" required="" type="text" />
+  
+        <label for="customerFistName">Prénom <em>&#x2a;</em>
+        </label><input id="customerFistName" name="customerFistName" required="" type="text" />
+  
+        <label for="customerAge">Age <em>&#x2a;</em></label>
+        <input id="customerAge" name="customerAge" pattern="[0-9]{2}" required="" type="text" />
+  
+        <label for="customerAddress">Adresse <em>&#x2a;</em></label>
+        <input id="customerAddress" name="customerAddress" required="" type="text" style="font-style: italic" placeholder= "numéro, rue, code postal, ville" />
+  
+        <label for="customerEmail">Email <em>&#x2a;</em></label>
+        <input id="customerEmail" name="customerEmail" required="" type="email" />
+  
+        <label for="customerPhone">Téléphone <em>&#x2a;</em></label>
+        <input id="customerPhone" name="customerPhone" pattern="[0-9]{10}" required="" type="text" />
+  
+        <label for="customerTitle">Titre de votre annonce<em>&#x2a;</em></label>
+        <input id="customerTitle" name="customerTitle" required="" type="text" />
+  
+        <label for="customerCategorie">Catégorie<em>&#x2a;</em></label>
+        <select required="">
+          <option value="">Faites votre choix</option>
+          <option value="1">Electricité, plomberie, maçonnerie</option>
+          <option value="2">Service à la personne (Garde d'enfant, Aide aux personnes âgées)</option>
+          <option value="3">Informatique</option>
+          <option value="4">Evénementiel</option>
+          <option value="4">Formation </option>
+        </select>
+        <br />
+  
+        <label for="customerDesc">Description <i class="glyphicon glyphicon-pencil"></i><em>&#x2a;</em></label>
+        <textarea id="customerDesc" name="customerDesc" required="" rows="4"></textarea>
+        <h3>
+          Merci de vérifier vos informations avant d'envoyer le formulaire
+        </h3>
+        <button id="customerOrder" class="btn btn-primary">Envoyer mon formulaire</button>
+      </form>
+    </div>
+  
+  </body>

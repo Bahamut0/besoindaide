@@ -14,6 +14,9 @@ h1, .lobster{
 .c-white, c.white :hover{
   color: #fff!important;
 }
+.a-hover :hover{
+  text-decoration: underline;
+}
 /* Code Bootsnip*/
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);

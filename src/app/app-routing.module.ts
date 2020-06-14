@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { SeekHelpComponent } from './seek-help/seek-help.component';
 import { OfferHelpComponent } from './offer-help/offer-help.component';
 import { AskHelpComponent } from './ask-help/ask-help.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "seek-help", component: SeekHelpComponent },
   { path: "prestations", component: ListPrestationsComponent },
   { path: "prestations/details", component: DetailsPrestationComponent },
+  { path: "profile", component: ProfileComponent },
 ];
 
 @NgModule({

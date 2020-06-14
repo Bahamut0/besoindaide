@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-offer-help',
-  template: `
-    <p>
-      offer-help works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: "./offer-help.component.html",
+  styleUrls: ["./offer-help.component.css"]
 })
 export class OfferHelpComponent implements OnInit {
 

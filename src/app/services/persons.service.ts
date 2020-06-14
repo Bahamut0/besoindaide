@@ -29,19 +29,19 @@ export class PersonsService {
       new Date("01/11/2016")
     ),
     new Person(
-      5, "Maurice", "Ateli", 21, "Ali@gmail.com", "gta4ever", "18 rue du sourire, 78200, Mantes la jolie, France", "/assets/img/users/men_3.jpg",
+      5, "Nas", "Bon vieux", 21, "Ali@gmail.com", "gta4ever", "18 rue du sourire, 78200, Mantes la jolie, France", "/assets/img/users/men_3.jpg",
       "De nature optimiste, joviale", "0678964515", "Faire des ballades avec mes enfants, le tricot, les romans policiers",
       new Date("01/11/2018")
     ),
     new Person(
-      6, "Cyril", "Potter", 32, "Cyril@gmail.com", "frites", "39 avenue de la bière, 93600, Aulnay, France", "/assets/img/users/men_4.jpg",
+      6, "Cyril", "Cool", 32, "Cyril@gmail.com", "frites", "39 avenue de la bière, 93600, Aulnay, France", "/assets/img/users/men_4.jpg",
       "de nature optimiste, joviale", "0678964515", "Faire des ballades avec mes enfants, le tricot, les romans policiers",
       new Date("01/11/2015")
     ),
   ]
   selectedPerson: Person;
   constructor() {
-    this.setSelectedPerson(this.persons[0]);
+    //this.setSelectedPerson(this.persons[0]);
   }
   //Récupérer les personnes
   getPersons(): Person[] {

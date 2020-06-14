@@ -1,3 +1,5 @@
+import { PersonsService } from './../services/persons.service';
+import { Person } from './../models/person';
 import { Prestation } from './../models/prestation';
 import { Category } from './../models/category';
 import { PrestationsService } from './../services/prestations.service';
@@ -18,6 +20,7 @@ export class ListPrestationsComponent implements OnInit {
   constructor(
     private router: Router,
     private prestationsService: PrestationsService,
+    private personsService: PersonsService,
     private categoriesService: CategoriesService,
   ) { }
 
@@ -26,7 +29,7 @@ export class ListPrestationsComponent implements OnInit {
     this.getCategories();
   }
 
-   getCategories(): void {
+  getCategories(): void {
      this.categories = this.categoriesService.getCategories();
    }
 
@@ -37,6 +40,12 @@ export class ListPrestationsComponent implements OnInit {
   navigateToDetails(prestation: Prestation): void {
     this.prestationsService.setSelectedPrestation(prestation);
     this.router.navigateByUrl("prestations/details");
+  }
+
+ //il n'y a pas de chemin vers les différents users mais vers un une prestation
+  navigateToProfile(person: Person): void {
+    this.personsService.setSelectedPerson(person);
+    this.router.navigateByUrl("profile");
   }
 
 }

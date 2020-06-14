@@ -2,14 +2,14 @@ import { Category } from './category';
 import { Person } from './person';
 
 export class Prestation {
-    typeAnnonce: boolean;//proposer ou demander
+    typeAnnonce: number;//proposer ou demander
     title: string;//titre de l'annonce
     description: string;
     category: Category; //par la suite elle sera enumération!
     datePublication: Date;    
     person : Person;
     constructor(
-      typeAnnonce: boolean,
+      typeAnnonce: number,
       title: string,
       description: string,
       category: Category,

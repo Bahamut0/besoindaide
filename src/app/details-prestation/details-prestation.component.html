@@ -11,9 +11,9 @@
         <div class="card card-body h-100 bg-white">
          
           <div class="card-body h-100">
-            <h2 class="card-title bolder text-primary text-center" *ngIf="selectedPrestation.typeAnnonce==true"><strong>Offre
+            <h2 class="card-title bolder text-primary text-center" *ngIf="selectedPrestation.typeAnnonce==0"><strong>Offre
               </strong> </h2>
-            <h2 class="card-title bolder text-secondary text-center" *ngIf="!selectedPrestation.typeAnnonce"><strong>Demande
+            <h2 class="card-title bolder text-secondary text-center" *ngIf="selectedPrestation.typeAnnonce==1"><strong>Demande
               </strong></h2>
               <hr>
             <p class="card-text"> <span class="bolder">Description :</span> {{ selectedPrestation.description }}</p>

@@ -1,0 +1,65 @@
+<body>
+    <h1 class="text-center my-5 py-5 text-info display-3" id="titre">Détail du profil </h1>
+  <div id="login-container">
+    <div class="profile-img"></div>
+    <div class="col-md-4">
+      <img src="{{ selectedPerson.urlPhoto }}" alt="" class="img-rounded img-responsive" id="imgprofil" />
+    </div> 
+    <div class="row">
+    <h1 id="nom">
+      {{ selectedPerson.name }} {{ selectedPerson.firstname }}
+    </h1>
+    <div class="col-sm-6 col-md-12">
+    <p>{{ selectedPerson.address }} <i class="fas fa-map-marker-alt"></i>
+    <br />
+    
+  <i class="fas fa-envelope"></i>  {{ selectedPerson.email }}
+    <br />
+    
+    <i class="fas fa-phone"></i> {{ selectedPerson.telephone }}
+    <br />
+    
+    <i class="fas fa-gift"></i>  {{ selectedPerson.age }} ans</p>
+  </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-sm-6 col-md-12">
+      <h4><img src="/assets/img/quote2.png" id="imgdesc" style="max-width: 10%" />    Quelques mots sur moi !</h4>
+      <p class="card-text" id="desc">{{ selectedPerson.descriptionProfil }}</p>
+    </div>
+  </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-6 col-md-12">
+      <h4><img src="/assets/img/passetemps.png" id="imgdesc" style="max-width: 8%"/> &emsp; Mes passions : </h4>
+      <p class="card-text" id="desc">{{ selectedPerson.mesPassions}}</p>
+    </div>
+  </div>
+  
+  <br/>
+  <div class="col md-6">
+  
+      <div class="row">
+        <div class="col-sm-8 col-md-12">
+          <h4><img src="/assets/img/annonce.png" id="imgdesc" style="max-width: 7%"/>    Mes annonces en cours : </h4>
+          <br/>
+
+        </div>
+     
+    
+  </div>
+  </div>
+    <footer>
+      <div class="likes">
+        <p><i class="fas fa-heart"></i></p>
+        <p>1.5K</p>
+      </div>
+      <div class="projects">
+        <p>Annonces</p>
+        <p>1</p>
+      </div>
+    </footer>
+  </div>
+  
+  </body>

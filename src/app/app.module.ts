@@ -11,6 +11,7 @@ import { OfferHelpComponent } from './offer-help/offer-help.component';
 import { SeekHelpComponent } from './seek-help/seek-help.component';
 import { ListPrestationsComponent } from './list-prestations/list-prestations.component';
 import { DetailsPrestationComponent } from './details-prestation/details-prestation.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetailsPrestationComponent } from './details-prestation/details-prestat
     OfferHelpComponent,
     SeekHelpComponent,
     ListPrestationsComponent,
-    DetailsPrestationComponent
+    DetailsPrestationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
