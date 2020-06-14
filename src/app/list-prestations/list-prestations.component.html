@@ -20,6 +20,37 @@
             <span (click)="getPrestationsByTypeAnnonce('demande')">Demandes</span>
           </a>
         </li>
+        <!--Filtre par catégorie-->
+        <li class="filter list-group-item" data-filter=".category">
+          <a title="Attention: il y a un bug si on click une 2eme fois sur ce bouton !">
+            <span>
+              <button style="background-color: #DFBE66;" class="filter btn btn-secondary dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filtre par catégorie
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <span class="dropdown-item category" *ngFor="let category of categories"
+                  (click)="getPrestationsByCategory(category.label)">{{ category.label }} </span>
+              </div>
+            </span>
+          </a>
+        </li>
+        <!--Filtre par date-->
+        <li class="filter list-group-item" data-filter=".date">
+          <a title="Attention: il y a un bug si on click une 2eme fois sur ce bouton !">
+            <span>
+              <button class="filter btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filtre par Date
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <span class="dropdown-item date" (click)="getPrestationsByDate(1)">Aujourd'hui</span>
+                <span class="dropdown-item date" (click)="getPrestationsByDate(7)">la derniere semaine</span>
+                <span class="dropdown-item date" (click)="getPrestationsByDate(30)">le dernier mois</span>
+              </div>
+            </span>
+          </a>
+        </li>
       </ul>
 
 <!-- Affichage des prestations-->

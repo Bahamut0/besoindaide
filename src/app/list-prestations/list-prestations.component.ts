@@ -67,8 +67,6 @@ export class ListPrestationsComponent implements OnInit {
         break;
     }
   }
-
-
   getPrestationsByDate(nbrJour: number): void {
 
     this.sortedPrestations = this.prestations.filter(
